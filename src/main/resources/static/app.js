@@ -39,7 +39,11 @@
  }
 
  function showGreeting(message) {
-     $("#greetings").append(`<tr><td>${message}</td></tr>`);
+//     $("#greetings").append(`<tr><td>${message}</td></tr>`);
+//       $("<td></td>").text(message).appendTo("<tr></tr>").appendTo("#greetings");
+	let tr = $("<tr></tr>");
+	$("<td></td>").text(message).appendTo(tr);
+	tr.appendTo("#greetings");
  }
 
  $(function() {
